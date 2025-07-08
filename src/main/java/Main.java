@@ -5,7 +5,16 @@ import controlador.ControladorVentas;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Main de la tienda de cocteles menú principal
+ * @author Rubén López
+ * @version 1
+ */
 public class Main {
+    /**
+     * Metodo para el menú principal
+     * @param args argumentos desde el menú principal se accede a otros menús
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int opcion = -1;

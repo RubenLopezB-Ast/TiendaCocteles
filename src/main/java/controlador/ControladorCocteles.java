@@ -9,9 +9,18 @@ import java.util.Scanner;
 import java.text.Collator;
 import java.util.Locale;
 
+/**
+ * Clase de controlador que gestiona y lista los cócteles
+ * @author Rubén López
+ * @version 1
+ */
 public class ControladorCocteles {
     private static ArrayList<Coctel> cocteles = new ArrayList<>();
 
+    /**
+     * Muestra el menú de opciones
+     * @param sc scanner para meter datos
+     */
     public static void menuCocteles(Scanner sc) {
         int opcion;
         do {
@@ -39,6 +48,10 @@ public class ControladorCocteles {
         } while (opcion != 6);
     }
 
+    /**
+     * Para meter un cóctel nuevo
+     * @param sc scanner para meter datos por teclado
+     */
     public static void altaCoctel(Scanner sc) {
         try {
             System.out.print("Nombre del cóctel: ");
@@ -58,6 +71,8 @@ public class ControladorCocteles {
             sc.nextLine(); // Limpiar
         }
     }
+
+    //Listado de cocteles
     public static void listarCocteles() {
         if (cocteles.isEmpty()) {
             System.out.println("=== ATENCIÓN === \n No hay cócteles en el catálogo");
@@ -69,6 +84,10 @@ public class ControladorCocteles {
         }
     }
 
+    /**
+     * Buscar coctel nombrandolo y sacarlo por consola
+     * @param sc scanner nombre del cóctel
+     */
     public static void buscarCoctel(Scanner sc) {
         System.out.print("Introduce el nombre del cóctel a buscar: ");
         String nombre = sc.nextLine();
@@ -84,10 +103,18 @@ public class ControladorCocteles {
         }
     }
 
+    /**
+     * Saca el listado de cócteles
+     * @return listado (arraylist) de los cócteles
+     */
     public static ArrayList<Coctel> getCocteles() {
         return cocteles;
     }
 
+    /**
+     * Para añadir cantidad de stock a un cóctel
+     * @param sc scanner para meter nombre del cóctel y cantidad
+     */
     public static void añadirStock(Scanner sc) {
         System.out.print("Introduce el nombre del cóctel al que quieres añadir stock: ");
         String nombre = sc.nextLine();
@@ -122,6 +149,10 @@ public class ControladorCocteles {
         }
     }
 
+    /**
+     * Elige (precio, nombrem stock) y ordenalos en una lista
+     * @param sc scanner entrada de la opción para ordenar
+     */
     public static void ordenarCocteles(Scanner sc){
         if (cocteles.isEmpty()){
             System.out.println("=== NO HAY COCTELES ===");

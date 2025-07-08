@@ -8,9 +8,18 @@ import java.util.InputMismatchException;
 import java.text.Collator;
 import java.util.Locale;
 
+/**
+ * Clase controlador para gestionar los clientes
+ * @author Rubén López
+ * @version 1
+ */
 public class ControladorClientes {
     private static ArrayList<Cliente> clientes = new ArrayList<>();
 
+    /**
+     * Menú de entrada de datos
+     * @param sc scanner para la toma de datos
+     */
     public static void menuClientes(Scanner sc) {
         int opcion = -1;
         do {
@@ -61,6 +70,10 @@ public class ControladorClientes {
         } while (opcion != 7);
     }
 
+    /**
+     * Alta nuevo cliente
+     * @param sc scanner para los datos del cliente
+     */
     public static void altaCliente(Scanner sc) {
         System.out.print("Nombre: ");
         String nombre = sc.nextLine();
@@ -79,6 +92,10 @@ public class ControladorClientes {
         System.out.println("=== CLIENTE AÑADIDO ===");
     }
 
+    /**
+     * Eliminar cliente por DNI
+     * @param sc Scanner para el DNI
+     */
     public static void bajaCliente(Scanner sc) {
         System.out.print("Introduce el DNI del cliente a eliminar: ");
         String dni = sc.nextLine();
@@ -90,6 +107,11 @@ public class ControladorClientes {
             System.out.println("=== CLIENTE NO ENCONTRADO ===");
         }
     }
+
+    /**
+     * Modificación de datos de clientes
+     * @param sc scanner para meter datos
+     */
 
     public static void modificarCliente(Scanner sc) {
         System.out.print("Introduce el DNI del cliente a modificar: ");
@@ -112,6 +134,10 @@ public class ControladorClientes {
         }
     }
 
+    /**
+     * Buscar y sacar cliente por DNI
+     * @param sc scanner para entrada del DNI
+     */
     public static void buscarCliente(Scanner sc) {
         System.out.print("Introduce el DNI del cliente a buscar: ");
         String dni = sc.nextLine();
@@ -122,7 +148,7 @@ public class ControladorClientes {
             System.out.println("=== CLIENTE NO ENCONTRADO ===");
         }
     }
-
+    //Lista de clientes
     public static void listarClientes() {
         if (clientes.isEmpty()) {
             System.out.println("No hay clientes registrados.");
@@ -133,6 +159,10 @@ public class ControladorClientes {
         }
     }
 
+    /**
+     * Ordenar los clientes por elección (DNI, Nombre, Apellidos)
+     * @param sc Scanner elige como quieres ordenar
+     */
     public static void ordenarClientes(Scanner sc) {
         if (clientes.isEmpty()) {
             System.out.println("No hay clientes");
@@ -180,6 +210,12 @@ public class ControladorClientes {
             sc.nextLine(); // Limpiar para que no se quede pillado
         }
     }
+
+    /**
+     * Saca cliente por DNI
+     * @param dni DNI cliente a buscar
+     * @return Cliente si está, si null no
+     */
     public static Cliente buscarPorDni(String dni) {
         for (Cliente c : clientes) {
             if (c.getDni().equalsIgnoreCase(dni)) {
@@ -189,6 +225,10 @@ public class ControladorClientes {
         return null;
     }
 
+    /**
+     * Saca listado de todos los clientes registrados
+     * @return lista de clientes
+     */
     public static ArrayList<Cliente> getClientes() {
         return clientes;
     }

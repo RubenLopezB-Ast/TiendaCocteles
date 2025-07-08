@@ -23,6 +23,6 @@ ordenación por distintos campos.
 ## 🍹💸 Ejecución
 
 1. Abre el proyecto en IntelliJ.
-2. Navega a la clase "Main.java" está en el paquete "TiendaCocteles".
+2. Navega a la clase "main.Main.java" está en el paquete "TiendaCocteles".
 3. Haz clic derecho en el play que aparece junto al método "main".
-4. Elige "Run Main.main()".
+4. Elige "Run main.Main.main()".

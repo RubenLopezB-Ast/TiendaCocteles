@@ -7,9 +7,18 @@ import clases.Venta;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Clase de contro para la gestión de las ventas
+ * @author Rubén López
+ * @version 1
+ */
 public class ControladorVentas {
     private static ArrayList<Venta> ventas = new ArrayList<>();
 
+    /**
+     * Registra venta, asocia a cliente y actualiza stock
+     * @param sc scanner para meter datos
+     */
     public static void realizarVenta(Scanner sc) {
         try {
             System.out.println("Introduce el DNI del cliente que realiza la compra:");
@@ -71,6 +80,11 @@ public class ControladorVentas {
             sc.nextLine(); // limpiar entrada
         }
     }
+
+    /**
+     * Menú gestión ventas y opciones
+     * @param sc scanner para meter datos
+     */
     public static void menuVentas(Scanner sc) {
         int opcion;
         do {
@@ -89,7 +103,7 @@ public class ControladorVentas {
             }
         } while (opcion != 3);
     }
-
+    //Ventas guardadas en la aplicación
     public static void mostrarTodasLasVentas() {
         if (ventas.isEmpty()) {
             System.out.println("No hay ventas registradas");
@@ -100,6 +114,10 @@ public class ControladorVentas {
         }
     }
 
+    /**
+     * Ventas por cliente, busqueda por DNI
+     * @param sc scanner meter DNI cliente
+     */
     public static void mostrarVentasPorCliente(Scanner sc) {
         System.out.print("Introduce el DNI del cliente: ");
         String dni = sc.nextLine();
@@ -115,6 +133,10 @@ public class ControladorVentas {
         }
     }
 
+    /**
+     * Listado de las ventas realizadas
+     * @return Listado de ventas
+     */
     public static ArrayList<Venta> getVentas() {
         return ventas;
     }
