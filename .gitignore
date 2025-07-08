@@ -1,6 +1,6 @@
 # No subir de IntelliJ IDEA
 .idea/
-*.iml
+TiendaCocteles.iml
 
 # No necesario de compliador
 out/
