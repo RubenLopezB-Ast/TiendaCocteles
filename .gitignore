@@ -1,29 +1,13 @@
-### IntelliJ IDEA ###
+# No subir de IntelliJ IDEA
+.idea/
+*.iml
+
+# No necesario de compliador
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
+# No subir archivos temporales y de sistema
+*.log
 .DS_Store
+Thumbs.db
+desktop.ini
+
