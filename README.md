@@ -28,9 +28,9 @@ ordenación por distintos campos.
 4. Elige "Run main.Main.main()".
 
 ## ©️ Copyright ©️
-🆔 Rubén López
-ℹ️ Versión 1
-®️ Licencia 
+🆔 Rubén López  
+ℹ️ Versión 1  
+®️ Licencia   
     Proyecto añadido al porfolio de Rubén López con el 
     objetivo de avanzar en el primer proyecto entregable 
     de evaluación continua de la asignatura de Entornos 
