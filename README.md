@@ -35,4 +35,4 @@ ordenación por distintos campos.
     objetivo de avanzar en el primer proyecto entregable 
     de evaluación continua de la asignatura de Entornos 
     de Desarrollo enmarcados en el primer curso del 
-    grado superior DAM (2025-20226) 
+    grado superior DAM (2025-2026) 
