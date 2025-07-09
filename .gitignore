@@ -1,10 +1,11 @@
 # No subir de IntelliJ IDEA
 .idea/
 TiendaCocteles.iml
-
+*.iml
 # No necesario de compliador
 out/
-
+target/
+*.class
 # No subir archivos temporales y de sistema
 *.log
 .DS_Store
